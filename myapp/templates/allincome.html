@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+{% block content %}
+  
+ <!doctype html>
+<html lang="en">
+  <head>
+    <title>AllIncomePage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  </head>
+  <body>
+  <section class="ftco-section">
+    <div class="container">
+      
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-9">
+          <div class="login-wrap py-5">
+           
+            <h3 class="text-center mb-0">AllIncome</h3>
+           
+            <table class="table">
+                <thead class="table-light">
+                       <tr>
+                          <th>Time</th>
+                          <th>Date</th>
+                          <th>Remark</th>
+                          <th>Amount</th>
+                          <th>Category</th>
+                       </tr>
+                </thead>
+                {% for x in data %}
+                  <tbody>
+                        <tr class="table-primary">
+                            <td>{{x.time}}</td>
+                        
+                            <td>{{x.date}}</td>
+                        
+                            <td>{{x.remark}}</td>
+                        
+                            <td>{{x.amount}}</td>
+                        
+                            <td>{{x.category}}</td>
+                        </tr>
+                  </tbody>
+                {% endfor %}
+            </table>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/popper.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/main.js"></script>
+
+  </body>
+</html>
+
+        
+{% endblock %}
